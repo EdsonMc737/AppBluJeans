@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Bungee+Tint&family=Chokokutai&family=Permanent+Marker&family=Playwrite+NZ+Guides&display=swap');
+:root{
+    /* ----- Fontes ------*/
+    --fonte-principal:  "Playwrite NZ Guides", cursive;
+    --fonte-secundaria:  "Bungee Spice", sans-serif;
+    --fonte-texto:  "Bungee Tint", sans-serif;
+    --fonte-titulos:"Chokokutai", system-ui;
+    --fonte-subtitulo: "Chokokutai", system-ui;
+
+    /* ----- cores ------*/
+     --azul-marinho: #0a1a33;      /* Azul marinho profundo */
+    --preto: #000000;             /* Preto puro */
+    --branco: #ffffff;            /* Branco puro */
+
+    /* Cores profundas */
+    --roxo-escuro: #2b0038;       /* Roxo puxado para o preto */
+    --vermelho-escuro: #330000;   /* Vermelho puxado para o preto */
+
+    /* Tons de apoio */
+    --cinza-claro: #f2f2f2;
+    --cinza-medio: #999999;
+    --cinza-escuro: #1a1a1a;
+
+
+
+}
