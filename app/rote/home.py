@@ -10,3 +10,17 @@ MODELOS_DATA = perfil_modelos()
 @home_bp.route('/')
 def index():
     return render_template('pages/index.html', home=HOME_DATA, modelos=MODELOS_DATA)
+
+
+@home_bp.route("/perfil/<int:id>")
+def perfil_modelo(id):
+    # busca modelo específico
+    modelo = next((m for m in MODELOS_DATA if m["id"] == id), None)
+
+    if not modelo:
+        return "Modelo não encontrado", 404
+
+    # envia somente o modelo
+    return render_template('pages/perfil.html', home=HOME_DATA, modelo=modelo)
+
+    

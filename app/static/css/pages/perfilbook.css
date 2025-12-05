@@ -1,0 +1,74 @@
+/* Container da capa e foto de perfil */
+.perfil-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url("{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}") center/cover no-repeat;
+}
+
+/* Foto de perfil circular aumentada */
+.perfil-avatar {
+    position: absolute;
+    bottom: -100px; /* ajustar para centralizar abaixo da capa */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;      /* aumento do tamanho */
+    height: 400px;     /* aumento do tamanho */
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+/* Nome e descrição centralizados */
+.perfil-info {
+    text-align: center;
+    margin-top: 120px; /* ajuste para dar espaço ao avatar maior */
+}
+
+.perfil-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.perfil-info p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botões sociais ou ação */
+.perfil-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.perfil-actions button {
+    padding: 10px 20px;
+    background-color: #4267B2; /* azul Facebook */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.perfil-actions button:hover {
+    background-color: #365899;
+}
+
+/* Seção de conteúdo extra / galeria */
+.perfil-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.perfil-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}

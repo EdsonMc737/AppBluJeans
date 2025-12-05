@@ -5,19 +5,19 @@
   <button class="seta-esquerda">&#10094;</button>
   <div class="carrossel-container">
     {% for modelo in modelos %}
-    <div class="modelo-card">
-      <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
-      <div class="conteudo">
-        <h2>{{ modelo.nome }}</h2>
-        <p>{{ modelo.descricao }}</p>
+    <a href="{{ url_for('home.perfil_modelo', id=modelo.id) }}" class="card-link">
+      <div class="modelo-card">
+        <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+        <div class="conteudo">
+          <h2>{{ modelo.nome }}</h2>
+          <p>{{ modelo.descricao }}</p>
+        </div>
       </div>
-    </div>
+    </a>
     {% endfor %}
   </div>
   <button class="seta-direita">&#10095;</button>
 </section>
-
-
 
 <script>
 const container = document.querySelector('.carrossel-container');
@@ -81,6 +81,14 @@ btnDireita.addEventListener('click', () => {
 
 // Inicializa
 updateCarousel();
+
+// Menu
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.onclick = () => {
+    navLinks.classList.toggle("open");
+}
 </script>
 
 {% endblock %}

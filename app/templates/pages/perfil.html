@@ -1,0 +1,27 @@
+{% extends 'template/base.html' %}
+{% block template %}
+<div class="perfil-header">
+    <!-- Foto de capa -->
+    <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}" style="display:none;">
+    <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+</div>
+
+<div class="perfil-info">
+    <h1>{{ modelo.nome }}</h1>
+    <p>{{ modelo.descricao }}</p>
+</div>
+
+<div class="perfil-actions">
+    <button>Seguir</button>
+    <button>Mensagem</button>
+    <button>Curtir</button>
+</div>
+
+<!-- Galeria de fotos (opcional) -->
+<div class="perfil-gallery">
+    {% for foto in modelo.galeria if modelo.galeria is defined %}
+    <img src="{{ url_for('static', filename='img/galeria/' ~ foto) }}" alt="Foto {{ loop.index }}">
+    {% endfor %}
+</div>
+{% endblock %}
+

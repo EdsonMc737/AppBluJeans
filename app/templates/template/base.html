@@ -10,20 +10,44 @@
 <body>
 
     <header>
+
         <h1>{{ home[0].titulo }}</h1>
         <p>Bem-vindo ao nosso portal de modelos</p>
+
+        <!-- NAV MENU -->
+        <nav class="navbar">
+            <div class="logo">Meu Site</div>
+
+            <div class="menu-btn" id="menuBtn">&#9776;</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{{url_for('home.index')}}">Início</a></li>
+                <li><a href="#">Modelos</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- FIM DO NAV -->
+
     </header>
 
     <main>
-        
-      {% block template %}
-      {% endblock %}
-
+        {% block template %}
+        {% endblock %}
     </main>
 
     <footer>
         &copy; 2025 Seu Projeto. Todos os direitos reservados.
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.onclick = () => {
+            navLinks.classList.toggle("open");
+        };
+    </script>
 
 </body>
 </html>
