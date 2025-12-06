@@ -23,4 +23,8 @@ def perfil_modelo(id):
     # envia somente o modelo
     return render_template('pages/perfil.html', home=HOME_DATA, modelo=modelo)
 
+@home_bp.route('/modelos')
+def page_modelo():
+    return render_template('pages/modelos.html', home=HOME_DATA, modelos=MODELOS_DATA)
+
     

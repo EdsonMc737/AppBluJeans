@@ -1,0 +1,44 @@
+.titulo-destaques {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #b30000; /* Vermelho escuro, você pode ajustar */
+  font-family: 'Fraktur', serif; /* Se estiver usando essa fonte */
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+.carrossel .modelo-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 400px;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s, opacity 0.5s;
+  cursor: pointer;
+  background: black;
+}
+
+.carrossel .modelo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carrossel .modelo-card .conteudo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #b30000;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  box-sizing: border-box;
+  user-select: none;
+}

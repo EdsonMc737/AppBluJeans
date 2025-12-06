@@ -1,0 +1,111 @@
+ /* Cabeçalho do perfil */
+    .perfil-header {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background: url('capa.jpg') center/cover no-repeat;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 50px;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    .perfil-avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid white;
+        object-fit: cover;
+        margin-right: 30px;
+    }
+
+    .perfil-info h1 {
+        margin: 0 0 10px 0;
+        font-size: 2em;
+    }
+
+    .perfil-info p {
+        margin: 0 0 20px 0;
+        font-size: 1.1em;
+        color: #ddd;
+    }
+
+    .perfil-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .perfil-actions button {
+        padding: 10px 20px;
+        background-color: #4267B2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .perfil-actions button:hover {
+        background-color: #365899;
+    }
+
+    /* Seção dos ensaios */
+    .ensaios {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .ensaio {
+        background: white;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .ensaio img {
+        width: 100%;
+        max-width: 400px;
+        object-fit: cover;
+    }
+
+    .ensaio-info {
+        padding: 20px;
+        flex: 1;
+    }
+
+    .ensaio-info h2 {
+        margin-top: 0;
+        font-size: 1.8em;
+    }
+
+    .ensaio-info p {
+        font-size: 1em;
+        color: #555;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .perfil-header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: auto;
+            padding: 20px;
+        }
+
+        .perfil-avatar {
+            margin: 0 0 20px 0;
+        }
+
+        .ensaio {
+            flex-direction: column;
+        }
+
+        .ensaio img {
+            max-width: 100%;
+        }
+    }

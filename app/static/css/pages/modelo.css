@@ -1,0 +1,116 @@
+/* Global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* garante que padding/margem não causem overflow */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* remove scroll horizontal global */
+    font-family: var(--fonte-principal);
+}
+
+/* Container de modelos */
+.modelos-container {
+    padding: 50px 20px;
+    width: 100%;
+    background-color: var(--vermelho-escuro);
+    text-align: center;
+}
+
+/* Grid de modelos */
+.modelos-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards por linha */
+    gap: 15px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px; /* limitar largura total para não gerar scroll */
+    margin: 0 auto; /* centraliza o grid */
+}
+
+/* Card do modelo */
+.modelo-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    overflow: hidden;
+    width: 100%;
+    max-width: 220px; /* largura do card menor que a coluna para evitar overflow */
+    transition: transform 0.3s;
+    color: #fff;
+    position: relative;
+}
+
+/* Imagem do card */
+.modelo-card img {
+    width: 100%;
+    height: 300px; /* reduzir altura para melhor ajuste */
+    object-fit: cover;
+}
+
+/* Conteúdo do card */
+.modelo-card .conteudo {
+    padding: 15px;
+    text-align: center;
+}
+
+.modelo-card .conteudo h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #f00;
+    font-family: 'Fraktur', serif;
+}
+
+.modelo-card .conteudo p {
+    font-size: 1em;
+    color: #f00;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Botão de perfil */
+.btn-perfil {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--vermelho-escuro);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-perfil:hover {
+    background-color: #e73370;
+}
+
+.modelo-card:hover {
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1200px) {
+    .modelos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .modelos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .modelos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .modelos-grid {
+        grid-template-columns: 1fr;
+    }
+}

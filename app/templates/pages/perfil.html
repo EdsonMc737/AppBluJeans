@@ -17,11 +17,23 @@
     <button>Curtir</button>
 </div>
 
-<!-- Galeria de fotos (opcional) -->
-<div class="perfil-gallery">
-    {% for foto in modelo.galeria if modelo.galeria is defined %}
-    <img src="{{ url_for('static', filename='img/galeria/' ~ foto) }}" alt="Foto {{ loop.index }}">
-    {% endfor %}
+
+
+<!-- Ensaios Fotográficos -->
+<div class="ensaios">
+    {% if modelo.ensaios is defined %}
+        {% for ensaio in modelo.ensaios %}
+            <div class="ensaio">
+                <img src="{{ url_for('static', filename=ensaio.imagem) }}" alt="{{ ensaio.titulo }}">
+                <div class="ensaio-info">
+                    <h2>{{ ensaio.titulo }}</h2>
+                    <p>{{ ensaio.descricao if ensaio.descricao is defined else '' }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
 </div>
+
+
 {% endblock %}
 

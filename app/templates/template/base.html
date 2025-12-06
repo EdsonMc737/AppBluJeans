@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQ5HZo+UwfjV2pQp7NkMEkT0lW3xH6x7TxkS3UMW6OqbfJKFxG6XGz0Y0Pf6Q7y4P0VXY5uqGmfXgx1mxpG3UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>{{ home[0].titulo }}</title>
 </head>
 <body>
@@ -16,17 +18,31 @@
 
         <!-- NAV MENU -->
         <nav class="navbar">
-            <div class="logo">Meu Site</div>
+            <div class="logo"><a href="{{url_for('home.index')}}">The Nigth</a></div>
 
             <div class="menu-btn" id="menuBtn">&#9776;</div>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="{{url_for('home.index')}}">Início</a></li>
-                <li><a href="#">Modelos</a></li>
+                <li><a href="{{url_for('home.page_modelo')}}">Modelos</a></li>
                 <li><a href="#">Galeria</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
+        <!-- BANNER PRINCIPAL -->
+
+        <div class="banner-principal">
+            <img src="{{ url_for('static', filename='img/banner/callGirls_21.jpg') }}" alt="Banner Principal">
+            <div class="overlay"></div> <!-- camada de transparência -->
+            <div class="banner-texto">
+                <h1>Descubra nossas modelos incríveis</h1>
+                <p>Explore nosso portfólio completo e encontre o estilo perfeito</p>
+                <a href="{{ url_for('home.page_modelo') }}" class="btn-banner">Ver Modelos</a>
+                <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+            </div>
+        </div>
+
+
         <!-- FIM DO NAV -->
 
     </header>
@@ -36,9 +52,19 @@
         {% endblock %}
     </main>
 
-    <footer>
-        &copy; 2025 Seu Projeto. Todos os direitos reservados.
-    </footer>
+    <footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Seu Projeto. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me" target="_blank" class="social-icon"><i class="fab fa-telegram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5511999999999" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+
 
     <script>
         const menuBtn = document.getElementById("menuBtn");
