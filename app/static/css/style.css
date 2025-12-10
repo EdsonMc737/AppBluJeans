@@ -6,8 +6,5 @@
 @import url(../css/pages/base.css);
 @import url(../css/componentes/perfil.css);
 @import url(../css/componentes/ensaio.css);
-
-
-@import url(../css/pages/modelo.css);
-@import url(../css/pages/index.css);
+@import url(../css/componentes/galeria.css);
 @import url(../css/componentes/rodape.css);

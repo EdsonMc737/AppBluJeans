@@ -9,6 +9,7 @@ def perfil_modelos():
             "descricao": "Morena",
             "imagem": "../../../static/img/destaques/Niemira_1.jpg",
             "capa": "../../../static/img/capas/Niemira_1.jpg",
+            "thumb": "../../../static/img/modelos/Niemira/Niemira_1/Niemira_2.jpg",
 
             "ensaios": [
                 {
@@ -116,6 +117,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/VickiWade_1.jpg",
             "capa": "../../../static/img/capas/VickiWade_1.jpg",
+            "thumb": "../../../static/img/modelos/VickiWade/VickiWade_1/VickiWade_3.jpg",
 
             "ensaios": [
                 {
@@ -195,7 +197,8 @@ def perfil_modelos():
             "descricao": "Descrição do modelo 3",
 
             "imagem": "../../../static/img/destaques/Wanda_2.jpg",
-             "capa": "../../../static/img/capas/Wanda_1.jpg",
+            "capa": "../../../static/img/capas/Wanda_1.jpg",
+            "thumb": "../../../static/img/modelos/Wanda/Wanda_1/Wanda_1.jpg",
 
             "ensaios": [
                 {
@@ -311,7 +314,8 @@ def perfil_modelos():
             "descricao": "Morena, Ucraniana",
 
             "imagem": "../../../static/img/destaques/AlissaFoxy_1.jpg",
-             "capa": "../../../static/img/capas/AlissaFoxy_1.jpg",
+            "capa": "../../../static/img/capas/AlissaFoxy_1.jpg",
+            "thumb":  "../../../static/img/modelos/AlissaFoxy/AlissaFoxy_1/AlissaFoxy_1.jpg",
 
             "ensaios": [
                 {
@@ -385,6 +389,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/AriaAlexander_1.jpg",
             "capa": "../../../static/img/capas/AriaAlexander_1.jpg",
+            "thumb":   "../../../static/img/modelos/AriaAlexander/AriaAlexander_1/AriaAlexander_1.jpg",
 
            "ensaios": [
                 {
@@ -475,6 +480,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/JillianJanson_1.jpg",
             "capa": "../../../static/img/capas/JillianJanson_1.jpg",
+            "thumb": "../../../static/img/modelos/JillianJanson/JillianJanson_2/JillianJanson_1.jpg",
 
            "ensaios": [
                 {
@@ -548,6 +554,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/LeahGotti_1.jpg",
             "capa": "../../../static/img/capas/LeahGotti_1.jpg",
+            "thumb":  "../../../static/img/modelos/LeahGotti/LeahGotti_2/LeahGotti_2.jpg",
 
             "ensaios": [
                 {
@@ -640,6 +647,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/LanaRhoades_1.jpg",
             "capa": "../../../static/img/capas/LanaRhoades_1.jpg",
+            "thumb":   "../../../static/img/modelos/LanaRhoades/LanaRhoades_1/LanaRhoades_1.jpg",
 
             "ensaios": [
                 {
@@ -721,6 +729,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/LacyLennon_1.jpg",
             "capa": "../../../static/img/capas/LacyLennon_1.jpg",
+            "thumb":   "../../../static/img/modelos/LacyLennon/LacyLennon_1/LacyLennon_2.jpg",
 
             "ensaios": [
                 {
@@ -799,7 +808,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/NancyA_1.jpg",
             "capa": "../../../static/img/capas/NancyA_1.jpg",
-
+            "thumb":    "../../../static/img/modelos/NancyA/NancyA_2/NancyA_1.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -874,6 +883,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/AbellaDanger_1.jpg",
             "capa": "../../../static/img/capas/AbellaDanger_1.jpg",
+            "thumb":  "../../../static/img/modelos/AbellaDanger/AbellaDanger_2/AbellaDanger_1.jpg",
 
             "ensaios": [
                 {
@@ -962,6 +972,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/Aleksandrina_1.jpg",
             "capa": "../../../static/img/capas/Aleksandrina_1.jpg",
+            "thumb": "../../../static/img/modelos/Aleksandrina/Aleksandrina_1/Aleksandrina_2.jpg",
 
             "ensaios": [
                 {
@@ -1072,6 +1083,7 @@ def perfil_modelos():
             "descricao": " Morena húngara, MILF, tatuagem, ",
             "imagem": "../../../static/img/destaques/AlettaOcean_1.jpg",
             "capa": "../../../static/img/capas/AlettaOcean_1.jpg",
+            "thumb":  "../../../static/img/modelos/AlettaOcean/AlettaOcean_1/AlettaOcean_2.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1142,7 +1154,9 @@ def perfil_modelos():
             "nome": "Alex Grey",
             "descricao": "Americana, Loira, Tatuada",
             "imagem": "../../../static/img/destaques/AlexGrey_1.jpg",
+
             "capa": "../../../static/img/capas/AlexGrey_1.jpg",
+            "thumb":   "../../../static/img/modelos/AlexGrey/AlexGrey_2/AlexGrey_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1229,8 +1243,10 @@ def perfil_modelos():
             "id": 15 ,
             "nome": "Alice Kelly",
             "descricao": "Morena, Russa",
+
             "imagem": "../../../static/img/destaques/AliceKelly_1.jpg",
             "capa": "../../../static/img/capas/AliceKelly_1.jpg",
+            "thumb": "../../../static/img/modelos/AliceKelly/AliceKelly_1/AliceKelly_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1325,6 +1341,7 @@ def perfil_modelos():
             "descricao": "Tcheca, Ruiva",
             "imagem": "../../../static/img/destaques/CharlieRed_1.jpg",
             "capa": "../../../static/img/capas/CharlieRed_1.jpg",
+            "thumb":  "../../../static/img/modelos/CharlieRed/CharlieRed_2/CharlieRed_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1411,7 +1428,8 @@ def perfil_modelos():
             "descricao": "Americana, Morena, MILF, Tatuagem",
             "imagem": "../../../static/img/destaques/DaniDaniels_1.jpg",
             "capa": "../../../static/img/capas/DaniDaniels_1.jpg",
-           "ensaios": [
+            "thumb":    "../../../static/img/modelos/DaniDaniels/DaniDaniels_1/DaniDaniels_2.jpg",
+            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
                     "fotos": [
@@ -1493,6 +1511,7 @@ def perfil_modelos():
             "descricao": "Morena, Baixinha, Magra, Tatuada, Ucraniana",
             "imagem": "../../../static/img/destaques/DeboraA_1.jpg",
             "capa": "../../../static/img/capas/DeboraA_1.jpg",
+            "thumb":   "../../../static/img/modelos/DeboraA/DeboraA_2/DeboraA_1.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1573,6 +1592,7 @@ def perfil_modelos():
             "descricao": "Americana, Loira, Baixinha, Magra, Tatuada",
             "imagem": "../../../static/img/destaques/ElsaJean_1.jpg",
             "capa": "../../../static/img/capas/ElsaJean_1.jpg",
+            "thumb":    "../../../static/img/modelos/ElsaJean/ElsaJean_1/ElsaJean_2.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1666,6 +1686,7 @@ def perfil_modelos():
             "descricao": "Atlético, Morena, Colombiana, Latina, MILF",
             "imagem": "../../../static/img/destaques/EsperanzaGomez_1.jpg",
             "capa": "../../../static/img/capas/EsperanzaGomez_1.jpg",
+            "thumb":   "../../../static/img/modelos/EsperanzaGomez/EsperanzaGomez_1/EsperanzaGomez_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1738,6 +1759,7 @@ def perfil_modelos():
             "descricao": "Morena, russa",
             "imagem": "../../../static/img/destaques/PandoraRed_1.jpg",
             "capa": "../../../static/img/capas/PandoraRed_1.jpg",
+            "thumb":   "../../../static/img/modelos/PandoraRed/PandoraRed_3/PandoraRed_1.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1829,6 +1851,7 @@ def perfil_modelos():
             "descricao": "Americana, Loira, MILF, Tatuada",
             "imagem": "../../../static/img/destaques/NicoleAniston_1.jpg",
             "capa": "../../../static/img/capas/NicoleAniston_1.jpg",
+            "thumb": "../../../static/img/modelos/NicoleAniston/NicoleAniston_6/NicoleAniston_5.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -1916,6 +1939,7 @@ def perfil_modelos():
             "descricao": "Morena, Europeia, Baixinha, Tatuagem, Ucraniana",
             "imagem": "../../../static/img/destaques/HayliSanders_1.jpg",
             "capa": "../../../static/img/capas/HayliSanders_1.jpg",
+            "thumb":  "../../../static/img/modelos/HayliSanders/HayliSanders_3/HayliSanders_1.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2000,6 +2024,7 @@ def perfil_modelos():
             "descricao": "Morena, Russa",
             "imagem": "../../../static/img/destaques/KiraRami_1.jpg",
             "capa": "../../../static/img/capas/KiraRami_1.jpg",
+            "thumb":  "../../../static/img/modelos/KiraRami/KiraRami_1/KiraRami_1.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2108,6 +2133,7 @@ def perfil_modelos():
             "descricao": "Americana, Morena, Pequena, Baixinha, Magra,",
             "imagem": "../../../static/img/destaques/KimmyGranger_1.jpg",
             "capa": "../../../static/img/capas/KimmyGranger_1.jpg",
+            "thumb":  "../../../static/img/modelos/KimmyGranger/KimmyGranger_2/KimmyGranger_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",

@@ -27,4 +27,6 @@ def perfil_modelo(id):
 def page_modelo():
     return render_template('pages/modelos.html', home=HOME_DATA, modelos=MODELOS_DATA)
 
-    
+@home_bp.route('/galeria')
+def imagens():
+    return render_template('pages/galeria.html', home=HOME_DATA, modelos=MODELOS_DATA)
