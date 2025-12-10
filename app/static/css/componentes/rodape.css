@@ -1,41 +1,83 @@
-/* Footer */
-.footer {
-    background-color: #2b0000; /* cor de fundo */
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
+footer {
+    position:relative;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    box-sizing: border-box;
+    height: 100px; /* altura fixa */
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza conteúdo verticalmente */
+    align-items: center;     /* centraliza conteúdo horizontalmente */
+    padding: 30px 30px;      /* padding interno moderado */
+    box-sizing: border-box;  /* evita overflow */
+    z-index: 1000;
 }
 
-.footer-container p {
-    margin: 0 0 15px 0;
-    font-size: 1rem;
+main {
+    margin-bottom: 120px; /* altura aproximada do footer para não sobrepor conteúdo */
+}
+footer .icon {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    top: -5px; /* sobe 5px */
+}
+
+
+.footer {
+    width: 100%;
+    background: #111;
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #b30000;
+    font-family: 'Fraktur', serif;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
+    margin-bottom: 15px;
 }
 
 .social-icons a {
+    font-size: 2rem;
     color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s, transform 0.3s;
+    transition: 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #ff4081; /* cor de destaque ao passar o mouse */
-    transform: scale(1.2);
+/* Efeitos individuais */
+.social-icons a.telegram:hover {
+    color: #34b7f1;
 }
 
-/* Responsivo para telas pequenas */
-@media (max-width: 480px) {
-    .social-icons {
-        gap: 10px;
-    }
-    .social-icons a {
-        font-size: 1.2rem;
-    }
+.social-icons a.instagram:hover {
+    color: #e1306c;
+}
+
+.social-icons a.twitter:hover {
+    color: #1da1f2;
+}
+
+.social-icons a.whatsapp:hover {
+    color: #25d366;
+}
+
+.social-icons a.facebook:hover {
+    color: #4267B2;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.6;
 }

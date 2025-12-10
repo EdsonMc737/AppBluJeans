@@ -1,246 +1,41 @@
-/* Reset básico */
-body {
+/* CSS geral */
+html, body {
+    height: 100%;          /* necessário para flexbox funcionar */
     margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: var(--fonte-principal);
     background-color: var(--vermelho-escuro);
-    color: var(--azul-marinho);
+    color:var(--azul-marinho)
 }
-
 /* Header */
-header {
+header{
     background-color: var(--roxo-escuro);
-    color: var(--branco);
+    color:var(--branco);
     padding: 2rem;
     text-align: center;
 }
-
-header h1 {
-    font-family: var(--fonte-titulos);
+header h1{
+    font-family: var(--fonte-secundaria);
     font-size: 3rem;
-    margin: 0;
+    margin:0;
 }
-
-header p {
+header p{
     font-family: var(--fonte-texto);
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    margin:0.5rem;
 }
-
 /* Main */
-main {
+main{
+
+    flex: 1;               /* ocupa todo espaço restante */
+    padding-bottom: 100px; /* espaço para o footer, evita sobreposição */
     padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Grid de modelos */
-.modelos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.modelo-card {
-    background-color: var(--branco);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.modelo-card:hover {
-    transform: translateY(-5px);
-}
-
-.modelo-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.modelo-card .conteudo {
-    padding: 1rem;
-}
-
-.modelo-card h2 {
-    font-family: var(--fonte-subtitulo);
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--vermelho-escuro);
-}
-
-.modelo-card p {
-    font-family: var(--fonte-texto);
-    font-size: 1rem;
-    color: var(--cinza-escuro);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--roxo-escuro);
-    color: var(--branco);
-    margin-top: 3rem;
-}
-.carrossel {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 100px auto;
-  overflow: hidden;
-  height: 450px;
-  background-color: var(--vermelho-escuro);; /* similar ao fundo da sua imagem */
-  display: flex;
-  align-items: center;
-}
-
-.carrossel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  user-select: none;
-  /* overflow: visible para que cards possam sair levemente dos limites */
-  overflow: visible;
-}
-
-.modelo-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  height: 400px;
-  margin: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.5s, opacity 0.5s;
-  cursor: pointer;
-  background: black;
-}
-
-.modelo-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.modelo-card .conteudo {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 10px;
-  background: rgba(0,0,0,0.6);
-  color: #b30000;
-  font-weight: bold;
-  font-family: 'Georgia', serif;
-  text-align: center;
-  box-sizing: border-box;
-  user-select: none;
-}
-
-/* Botões setas */
-.seta-esquerda, .seta-direita {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  background: rgba(0,0,0,0.6);
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 12px;
-  border-radius: 50%;
-  z-index: 20;
-  user-select: none;
-  transition: background 0.3s;
-}
-
-.seta-esquerda:hover, .seta-direita:hover {
-  background: rgba(0,0,0,0.9);
-}
-
-.seta-esquerda { left: 10px; }
-.seta-direita { right: 10px; }
-
-/* nav bar */
-
-/* ================= NAVBAR ================= */
-
-.navbar {
-    width: 100%;
-    background: #2b0000; /* Combina com seu fundo vinho */
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.navbar .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links li a {
-    color: #ffffff;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 8px 12px;
-    border-radius: 6px;
-}
-
-.nav-links li a:hover {
-    background: #ff3333;
-    color: #ffffff;
-}
-
-/* Botão hamburguer */
-.menu-btn {
-    display: none;
-    font-size: 32px;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-/* ================= RESPONSIVO ================= */
-
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 110px;
-        right: 20px;
-        background: #2b0000;
-        flex-direction: column;
-        width: 220px;
-        padding: 20px;
-        border-radius: 8px;
-        display: none;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-bottom: 15px;
-    }
+     padding-bottom: 120px;
+ 
 }

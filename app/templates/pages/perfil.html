@@ -1,12 +1,9 @@
-{% extends 'template/base.html' %}
+{% extends 'template/base_modelo.html' %}
 {% block template %}
-<div class="perfil-header"
-     style="background-image: url('{{ url_for('static', filename='img/capas/' ~ modelo.capa) }}');">
 
+<div class="perfil-header" style="background-image: url('{{ url_for('static', filename='img/capas/' ~ modelo.capa) }}');">
     <!-- Avatar -->
-    <img class="perfil-avatar"
-         src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}"
-         alt="{{ modelo.nome }}">
+    <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
 
     <div class="perfil-info">
         <h1>{{ modelo.nome }}</h1>
@@ -20,32 +17,25 @@
     </div>
 </div>
 
-
-
 <!-- Ensaios Fotográficos -->
 <div class="ensaios">
     {% if modelo.ensaios %}
         {% for ensaio in modelo.ensaios %}
             <div class="ensaio">
-
                 <h2>{{ ensaio.titulo }}</h2>
                 <p>{{ ensaio.descricao }}</p>
 
                 <div class="fotos-ensaio">
                     {% for foto in ensaio.fotos %}
-                        <img src="{{ url_for('static', filename=foto) }}"
-                             alt="{{ ensaio.titulo }}">
+                        <img src="{{ url_for('static', filename=foto) }}" alt="{{ ensaio.titulo }}">
                     {% endfor %}
                 </div>
-
             </div>
         {% endfor %}
     {% endif %}
 </div>
 
-
-
-<!-- Modal para ampliar fotos com navegação -->
+<!-- Modal para ampliar fotos -->
 <div id="modalFoto" class="modal">
     <span class="modal-close">&times;</span>
     <span class="modal-prev">&#10094;</span>
@@ -53,39 +43,34 @@
     <img class="modal-content" id="imgModal">
 </div>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-
     const modal = document.getElementById("modalFoto");
     const modalImg = document.getElementById("imgModal");
-    const closeBtn = document.querySelector(".modal-close");
-    const prevBtn = document.querySelector(".modal-prev");
-    const nextBtn = document.querySelector(".modal-next");
+    const closeBtn = modal.querySelector(".modal-close");
+    const prevBtn = modal.querySelector(".modal-prev");
+    const nextBtn = modal.querySelector(".modal-next");
 
-    let fotos = []; // array das fotos do ensaio
+    if (!modal || !modalImg || !closeBtn || !prevBtn || !nextBtn) return;
+
+    // Seleciona todas as fotos dentro dos ensaios
+    const fotosEnsaios = document.querySelectorAll(".ensaio .fotos-ensaio img");
+    if (fotosEnsaios.length === 0) return;
+
+    let fotos = Array.from(fotosEnsaios);
     let indiceAtual = 0;
 
-    // Seleciona todos os ensaios
-    const ensaios = document.querySelectorAll(".ensaio");
-
-    ensaios.forEach(ensaio => {
-        const imagens = ensaio.querySelectorAll("img");
-
-        imagens.forEach((img, idx) => {
-            img.addEventListener("click", () => {
-                fotos = Array.from(imagens); // fotos do ensaio atual
-                indiceAtual = idx;
-                abrirModal(indiceAtual);
-            });
+    // Abre modal ao clicar na foto
+    fotos.forEach((img, idx) => {
+        img.addEventListener("click", (e) => {
+            e.stopPropagation();
+            indiceAtual = idx;
+            modalImg.src = img.src;
+            modal.style.display = "flex";
         });
     });
 
-    function abrirModal(i) {
-        modal.style.display = "block";
-        modalImg.src = fotos[i].src;
-    }
-
+    // Funções de navegação
     function mostrarProximo() {
         indiceAtual = (indiceAtual + 1) % fotos.length;
         modalImg.src = fotos[indiceAtual].src;
@@ -96,43 +81,23 @@ document.addEventListener("DOMContentLoaded", function() {
         modalImg.src = fotos[indiceAtual].src;
     }
 
-    // Eventos das setas
-    nextBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mostrarProximo();
-    });
+    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); mostrarProximo(); });
+    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); mostrarAnterior(); });
 
-    prevBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mostrarAnterior();
-    });
-
-    // Fechar ao clicar no X
-    closeBtn.onclick = () => { modal.style.display = "none"; }
-
-    // Fechar ao clicar fora da imagem
-    modal.onclick = () => { modal.style.display = "none"; }
-
-    // Evitar fechar quando clicar na imagem ou setas
-    modalImg.onclick = (e) => e.stopPropagation();
-    prevBtn.onclick = (e) => e.stopPropagation();
-    nextBtn.onclick = (e) => e.stopPropagation();
+    // Fecha modal
+    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
+    modal.addEventListener("click", () => { modal.style.display = "none"; });
+    modalImg.addEventListener("click", (e) => e.stopPropagation());
 
     // Navegação pelo teclado
-    document.addEventListener("keydown", function(e) {
-        if(modal.style.display === "block") {
+    document.addEventListener("keydown", (e) => {
+        if(modal.style.display === "flex") {
             if(e.key === "ArrowRight") mostrarProximo();
             if(e.key === "ArrowLeft") mostrarAnterior();
             if(e.key === "Escape") modal.style.display = "none";
         }
     });
-
 });
 </script>
 
-
-
-
-
 {% endblock %}
-

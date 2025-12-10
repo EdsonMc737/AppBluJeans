@@ -1,0 +1,85 @@
+.carrossel {
+    position: relative;
+    width: 100%;
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    margin-top: 13rem;
+    overflow: visible;
+}
+
+.carrossel-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    user-select: none;
+    overflow: visible;
+}
+/* Botões setas */
+.seta-esquerda, .seta-direita{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 20;
+    user-select: none;
+    transition:  background 0.5s;
+}
+.seta-esquerda:hover, .seta-direita:hover{
+    background: rgba(0,0,0,0.9);
+}
+.seta-esquerda { left: 10px; }
+.seta-direita { right: 10px; }
+
+.titulo-destaques {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #b30000; /* Vermelho escuro, você pode ajustar */
+  font-family: 'Fraktur', serif; /* Se estiver usando essa fonte */
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+.carrossel .modelo-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 400px;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.5s, opacity 0.5s;
+  cursor: pointer;
+  background: black;
+}
+.carrossel .modelo-card .conteudo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #b30000;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  box-sizing: border-box;
+  user-select: none;
+}
+.carrossel .modelo-card .conteudo {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0)
+    );
+    color: #b30000;
+}
+
