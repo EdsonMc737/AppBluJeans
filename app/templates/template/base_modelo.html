@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>{{ home[0].titulo }}</title>
+    <title>{{titulo }}</title>
 </head>
 <body>
 
     <header>
+            <!-- NAV MENU -->
+            <nav class="navbar">
+        <div class="logo"><a href="{{ url_for('home.index') }}">The Night</a></div>
 
-        <h1>{{ home[0].titulo }}</h1>
-        <p>Bem-vindo ao nosso portal de modelos</p>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ url_for('home.index') }}">Início</a></li>
+            <li><a href="{{ url_for('home.page_modelo') }}">Modelos</a></li>
+            <li><a href="{{ url_for('home.imagens') }}">Galeria</a></li>
+            <li><a href="{{url_for('home.contatos')}}">Contato</a></li>
+        </ul>
 
-        <!-- NAV MENU -->
-        <nav class="navbar">
-            <div class="logo"><a href="{{url_for('home.index')}}">The Nigth</a></div>
+        <form class="search-form" action="{{ url_for('home.index') }}" method="GET">
+            <input type="text" name="pesquisa" placeholder="Digite Nome" value="{{ pesquisa }}">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
 
-            <div class="menu-btn" id="menuBtn">&#9776;</div>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="{{url_for('home.index')}}">Início</a></li>
-                <li><a href="{{url_for('home.page_modelo')}}">Modelos</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="menu-btn" id="menuBtn">&#9776;</div>
+    </nav>
 
         <!-- FIM DO NAV -->
 
@@ -38,8 +39,12 @@
         {% block template %}
         {% endblock %}
     </main>
+      <a href="https://web.whatsapp.com/" class="icone-flutuante">
+             <img src="{{url_for('static', filename='img/icones/whatsapp.png')}}" alt="Ícone">
+        </a>
 <footer class="footer">
     <div class="footer-container">
+    
 
         <p class="footer-title">Siga-nos nas redes sociais</p>
 

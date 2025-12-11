@@ -2,13 +2,10 @@
 {% block template %}
 
 <div class="perfil-header" style="background-image: url('{{ url_for('static', filename='img/capas/' ~ modelo.capa) }}');">
-    <!-- Avatar -->
     <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
-
     <div class="perfil-info">
         <h1>{{ modelo.nome }}</h1>
         <p>{{ modelo.descricao }}</p>
-
         <div class="perfil-actions">
             <button>Seguir</button>
             <button>Mensagem</button>
@@ -21,10 +18,9 @@
 <div class="ensaios">
     {% if modelo.ensaios %}
         {% for ensaio in modelo.ensaios %}
-            <div class="ensaio">
+            <div class="ensaio" data-ensaio="{{ loop.index0 }}">
                 <h2>{{ ensaio.titulo }}</h2>
                 <p>{{ ensaio.descricao }}</p>
-
                 <div class="fotos-ensaio">
                     {% for foto in ensaio.fotos %}
                         <img src="{{ url_for('static', filename=foto) }}" alt="{{ ensaio.titulo }}">
@@ -40,7 +36,10 @@
     <span class="modal-close">&times;</span>
     <span class="modal-prev">&#10094;</span>
     <span class="modal-next">&#10095;</span>
-    <img class="modal-content" id="imgModal">
+    <div class="modal-main">
+        <img class="modal-content" id="imgModal">
+    </div>
+    <div class="modal-thumbnails" id="thumbnailsContainer"></div>
 </div>
 
 <script>
@@ -50,46 +49,62 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeBtn = modal.querySelector(".modal-close");
     const prevBtn = modal.querySelector(".modal-prev");
     const nextBtn = modal.querySelector(".modal-next");
+    const thumbnailsContainer = document.getElementById("thumbnailsContainer");
 
-    if (!modal || !modalImg || !closeBtn || !prevBtn || !nextBtn) return;
-
-    // Seleciona todas as fotos dentro dos ensaios
-    const fotosEnsaios = document.querySelectorAll(".ensaio .fotos-ensaio img");
-    if (fotosEnsaios.length === 0) return;
-
-    let fotos = Array.from(fotosEnsaios);
+    let fotos = [];
     let indiceAtual = 0;
 
-    // Abre modal ao clicar na foto
-    fotos.forEach((img, idx) => {
-        img.addEventListener("click", (e) => {
-            e.stopPropagation();
-            indiceAtual = idx;
-            modalImg.src = img.src;
-            modal.style.display = "flex";
+    // Carregar apenas fotos do ensaio clicado
+    const ensaiosDiv = document.querySelectorAll(".ensaio");
+    ensaiosDiv.forEach(ensaioDiv => {
+        const imgs = ensaioDiv.querySelectorAll("img");
+        imgs.forEach((img, idx) => {
+            img.addEventListener("click", (e) => {
+                e.stopPropagation();
+                fotos = Array.from(imgs).map(i => i.src);
+                indiceAtual = idx;
+                mostrarImagem(indiceAtual);
+                modal.style.display = "flex";
+                renderizarMiniaturas();
+            });
         });
     });
 
-    // Funções de navegação
+    function mostrarImagem(indice) {
+        indiceAtual = indice;
+        modalImg.src = fotos[indiceAtual];
+
+        // Atualiza destaque das miniaturas
+        const thumbs = thumbnailsContainer.querySelectorAll("img");
+        thumbs.forEach((thumb, i) => thumb.classList.toggle("active", i === indiceAtual));
+    }
+
     function mostrarProximo() {
-        indiceAtual = (indiceAtual + 1) % fotos.length;
-        modalImg.src = fotos[indiceAtual].src;
+        mostrarImagem((indiceAtual + 1) % fotos.length);
     }
 
     function mostrarAnterior() {
-        indiceAtual = (indiceAtual - 1 + fotos.length) % fotos.length;
-        modalImg.src = fotos[indiceAtual].src;
+        mostrarImagem((indiceAtual - 1 + fotos.length) % fotos.length);
     }
 
-    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); mostrarProximo(); });
-    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); mostrarAnterior(); });
+    function renderizarMiniaturas() {
+        thumbnailsContainer.innerHTML = "";
+        fotos.forEach((foto, i) => {
+            const img = document.createElement("img");
+            img.src = foto;
+            img.addEventListener("click", () => mostrarImagem(i));
+            if (i === indiceAtual) img.classList.add("active");
+            thumbnailsContainer.appendChild(img);
+        });
+    }
 
-    // Fecha modal
-    closeBtn.addEventListener("click", () => { modal.style.display = "none"; });
-    modal.addEventListener("click", () => { modal.style.display = "none"; });
-    modalImg.addEventListener("click", (e) => e.stopPropagation());
+    // Eventos do modal
+    nextBtn.addEventListener("click", e => { e.stopPropagation(); mostrarProximo(); });
+    prevBtn.addEventListener("click", e => { e.stopPropagation(); mostrarAnterior(); });
+    closeBtn.addEventListener("click", () => modal.style.display = "none");
+    modal.addEventListener("click", () => modal.style.display = "none");
+    modalImg.addEventListener("click", e => e.stopPropagation());
 
-    // Navegação pelo teclado
     document.addEventListener("keydown", (e) => {
         if(modal.style.display === "flex") {
             if(e.key === "ArrowRight") mostrarProximo();

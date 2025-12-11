@@ -1,0 +1,34 @@
+{% extends "template/base.html" %}
+
+{% block template %}
+<section class="contato-section">
+    <div class="contato-container">
+        <h2>Fale Conosco</h2>
+        <p>Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+
+        <form class="contato-form" action="#" method="POST">
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+            </div>
+
+            <div class="input-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem" required></textarea>
+            </div>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

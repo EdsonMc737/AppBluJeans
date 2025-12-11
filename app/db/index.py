@@ -2220,6 +2220,7 @@ def perfil_modelos():
 
             "imagem": "../../../static/img/destaques/JaneDavis_1.jpg",
             "capa": "../../../static/img/capas/JaneDavis_1.jpg",
+            "thumb": "../../../static/img/modelos/JaneDavis/JaneDavis_1/JaneDavis_2.jpg",
 
           "ensaios": [
                 {
@@ -2309,6 +2310,7 @@ def perfil_modelos():
             "descricao": "Morena, Alemã, Adolescente",
             "imagem": "../../../static/img/destaques/JewlzBlu_1.jpg",
             "capa": "../../../static/img/capas/JewlzBlu_1.jpg",
+            "thumb": "../../../static/img/modelos/JewlzBlu/JewlzBlu_2/JewlzBlu_1.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2399,6 +2401,7 @@ def perfil_modelos():
             "descricao": "Cabelo castanho, morena, russa",
             "imagem": "../../../static/img/destaques/JuliaMorozzi_1.jpg",
             "capa": "../../../static/img/capas/JuliaMorozzi_1.jpg",
+            "thumb":  "../../../static/img/modelos/JuliaMorozzi/JuliaMorozzi_1/JuliaMorozzi_2.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2487,6 +2490,7 @@ def perfil_modelos():
             "descricao": "Americana, atlética, tatuagem",
             "imagem": "../../../static/img/destaques/KaliRose_1.jpg",
             "capa": "../../../static/img/capas/KaliRose_1.jpg",
+            "thumb":   "../../../static/img/modelos/KaliRose/KaliRose_1/KaliRose_2.jpg",
            "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2545,6 +2549,7 @@ def perfil_modelos():
             "descricao": "Americana, Loira, MILF,",
             "imagem": "../../../static/img/destaques/LenaPaul_1.jpg",
             "capa": "../../../static/img/capas/LenaPaul_1.jpg",
+            "thumb":   "../../../static/img/modelos/LenaPaul/LenaPaul_1/LenaPaul_2.jpg",
             "ensaios": [
                 {
                     "titulo": "Retrato Criativo",
@@ -2605,6 +2610,83 @@ def perfil_modelos():
                         "../../../static/img/modelos/LenaPaul/LenaPaul_3/LenaPaul_14.jpg",
                         "../../../static/img/modelos/LenaPaul/LenaPaul_3/LenaPaul_15.jpg",
                          "../../../static/img/modelos/LenaPaul/LenaPaul_3/LenaPaul_16.jpg",
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "nome": "Gina Valentina",
+            "descricao": "Americana, Morena, Branca",
+            "imagem": "../../../static/img/destaques/GinaValentina_1.jpg",
+            "capa": "../../../static/img/capas/GinaValentina_1.jpg",
+            "thumb":   "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_2.jpg",
+            "ensaios": [
+                {
+                    "titulo": "Retrato Criativo",
+                    "fotos": [
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_1.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_2.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_3.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_4.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_5.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_6.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_7.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_8.jpg", 
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_9.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_10.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_11.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_12.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_13.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_14.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_15.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_1/GinaValentina_16.jpg",
+                    ]
+                },
+                {
+                    "titulo": "Lifestyle",
+                    "fotos": [
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_1.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_2.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_3.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_4.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_5.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_6.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_7.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_8.jpg", 
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_9.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_10.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_11.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_12.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_13.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_14.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_15.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_16.jpg",
+                    ]
+                },
+                {
+                    "titulo": "Conceitual",
+                    "fotos": [
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_1.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_2.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_3.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_4.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_5.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_6.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_7.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_8.jpg", 
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_9.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_10.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_11.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_12.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_13.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_14.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_15.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_16.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_17.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_18.jpg", 
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_19.jpg",
+                        "../../../static/img/modelos/GinaValentina/GinaValentina_3/GinaValentina_20.jpg",
                     ]
                 }
             ]

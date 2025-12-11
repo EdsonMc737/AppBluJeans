@@ -1,109 +1,142 @@
 .navbar {
-    width: 100%;
-    background: var(--vermelho-escuro);
-    padding: 15px 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    position: relative;
-    z-index: 100;
-    transition: background 0.3s ease;
-}
-
-.navbar:hover {
-    background: #990000; /* efeito hover suave no navbar */
-}
-
-.navbar .logo a {
-    font-size: 26px;
-    font-weight: bold;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: var(--azul-marinho);
     color: var(--branco);
-    letter-spacing: 2px;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-family: var(--fonte-principal);
+    position: relative;
+    z-index: 50; /* garante que fique acima de outros elementos */
 }
 
-.navbar .logo a:hover {
+/* Logo à esquerda */
+.navbar .logo a {
+    font-family: var(--fonte-titulos);
+    font-size: 28px;
+    font-weight: bold;
     color: var(--vermelho-claro);
+    text-decoration: none;
 }
 
-.nav-links {
+/* Links centralizados */
+.navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 32px;
+    flex: 1;
+    justify-content: center;
+    transition: max-height 0.4s ease;
 }
 
-.nav-links li a {
+.navbar .nav-links li a {
     color: var(--branco);
-    font-size: 18px;
     text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    position: relative;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--vermelho-claro);
-    transition: 0.3s;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-}
-
-.nav-links li a:hover {
+.navbar .nav-links li a:hover {
     color: var(--vermelho-claro);
-    background: rgba(255, 51, 51, 0.1);
 }
 
-/* Botão hambúrguer */
+/* Formulário de pesquisa à direita */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.search-form input[type="text"] {
+    padding: 6px 12px;
+    border-radius: 25px;
+    border: 2px solid var(--cinza-medio);
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 160px;
+    font-family: var(--fonte-texto);
+    background-color: var(--branco);
+    color: var(--azul-marinho);
+}
+
+.search-form input[type="text"]:focus {
+    border-color: var(--vermelho-claro);
+    box-shadow: 0 0 6px rgba(255, 51, 51, 0.4);
+}
+
+.search-form button {
+    border: none;
+    background-color: var(--vermelho-escuro);
+    color: var(--branco);
+    padding: 6px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: var(--vermelho-claro);
+}
+
+/* Menu button (mobile) */
 .menu-btn {
     display: none;
-    font-size: 32px;
+    font-size: 28px;
     cursor: pointer;
     color: var(--branco);
-    transition: color 0.3s ease;
 }
 
-.menu-btn:hover {
-    color: var(--vermelho-claro);
-}
-
-/* ================= RESPONSIVO ================= */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
+/* ===== Responsivo ===== */
+@media (max-width: 992px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px 16px;
     }
+    .search-form input[type="text"] {
+        width: 120px;
+    }
+    .search-form button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
 
+@media (max-width: 768px) {
     .nav-links {
         position: absolute;
-        top: 70px;
-        right: 20px;
-        background: var(--vermelho-escuro);
+        top: 60px;
+        left: 0;
+        right: 0;
         flex-direction: column;
-        width: 220px;
-        padding: 20px;
-        border-radius: 10px;
+        background-color: var(--azul-marinho);
         display: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        transition: all 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
     }
 
     .nav-links.open {
         display: flex;
+        max-height: 500px; /* suficiente para mostrar todos os links */
+        gap: 0;
+        text-align: center;
     }
 
-    .nav-links li {
-        margin-bottom: 15px;
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 14px;
+    }
+
+    .search-form {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-form input[type="text"] {
+        width: 70%;
     }
 }

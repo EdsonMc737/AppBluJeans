@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>{{ home[0].titulo }}</title>
+    <title>{{ titulo }}</title>
 </head>
 <body>
 
     <header>
+<!-- NAV MENU -->
+<nav class="navbar">
+    <div class="logo"><a href="{{ url_for('home.index') }}">The Night</a></div>
 
-        <h1>{{ home[0].titulo }}</h1>
-        <p>Bem-vindo ao nosso portal de modelos</p>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="{{ url_for('home.index') }}">Início</a></li>
+        <li><a href="{{ url_for('home.page_modelo') }}">Modelos</a></li>
+        <li><a href="{{ url_for('home.imagens') }}">Galeria</a></li>
+        <li><a href="{{url_for('home.contatos')}}">Contato</a></li>
+    </ul>
 
-        <!-- NAV MENU -->
-        <nav class="navbar">
-            <div class="logo"><a href="{{url_for('home.index')}}">The Nigth</a></div>
+    <form class="search-form" action="{{ url_for('home.index') }}" method="GET">
+        <input type="text" name="pesquisa" placeholder="Digite Nome" value="{{ pesquisa }}">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 
-            <div class="menu-btn" id="menuBtn">&#9776;</div>
+    <div class="menu-btn" id="menuBtn">&#9776;</div>
+</nav>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="{{url_for('home.index')}}">Início</a></li>
-                <li><a href="{{url_for('home.page_modelo')}}">Modelos</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+
         <!-- BANNER PRINCIPAL -->
 
         <div class="banner-principal">
@@ -42,7 +45,9 @@
             </div>
         </div>
 
-
+        <a href="https://web.whatsapp.com/" target="_blank" class="icone-flutuante">
+             <img src="{{url_for('static', filename='img/icones/whatsapp.png')}}" alt="Ícone">
+        </a>
         <!-- FIM DO NAV -->
 
     </header>
@@ -57,11 +62,11 @@
         <p class="footer-title">Siga-nos nas redes sociais</p>
 
         <div class="social-icons">
-            <a href="#" class="telegram"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://web.telegram.org/"  target="_blank" class="telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/"  target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/"  target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://web.whatsapp.com/"  target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/"  target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
         </div>
 
         <p class="copy">© 2025 — Todos os direitos reservados.</p>

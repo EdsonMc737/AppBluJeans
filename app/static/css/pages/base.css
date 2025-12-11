@@ -1,41 +1,95 @@
-/* CSS geral */
+/* ===== CSS Geral Responsivo ===== */
 html, body {
-    height: 100%;          /* necessário para flexbox funcionar */
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--fonte-principal);
     background-color: var(--vermelho-escuro);
-    color:var(--azul-marinho)
+    color: var(--azul-marinho);
 }
+
 /* Header */
-header{
+header {
     background-color: var(--roxo-escuro);
-    color:var(--branco);
+    color: var(--branco);
     padding: 2rem;
     text-align: center;
 }
-header h1{
+
+header h1 {
     font-family: var(--fonte-secundaria);
     font-size: 3rem;
-    margin:0;
+    margin: 0;
 }
-header p{
+
+header p {
     font-family: var(--fonte-texto);
     font-size: 1.2rem;
-    margin:0.5rem;
+    margin: 0.5rem;
 }
-/* Main */
-main{
 
-    flex: 1;               /* ocupa todo espaço restante */
-    padding-bottom: 100px; /* espaço para o footer, evita sobreposição */
+/* Main */
+main {
+    flex: 1;
     padding: 2rem;
-     padding-bottom: 120px;
- 
+    padding-bottom: 120px; /* espaço para o footer */
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablets (até 992px) */
+@media (max-width: 992px) {
+    header {
+        padding: 1.5rem;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main {
+        padding: 1.5rem;
+        padding-bottom: 120px;
+    }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 0.95rem;
+    }
+    main {
+        padding: 1rem;
+        padding-bottom: 120px;
+    }
+}
+
+/* Pequenos celulares (até 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header p {
+        font-size: 0.85rem;
+    }
+    main {
+        padding: 0.8rem;
+        padding-bottom: 120px;
+    }
 }
