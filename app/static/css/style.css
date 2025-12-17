@@ -13,9 +13,7 @@
 @import url(../css/componentes/whatsapp.css);
 @import url(../css/componentes/botao_pesquisa.css);
 @import url(../css/pages/contato.css);
-<<<<<<< HEAD
-@import url(../css/componentes/fotos_modal.css)
-=======
 @import url(../css/componentes/fotos_modal.css);
-@import url(../css/pages/servico.css)
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
+@import url(../css/pages/servico.css);
+@import url(../css/componentes/msg.css)
+

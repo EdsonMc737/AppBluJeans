@@ -32,11 +32,8 @@ header p {
     font-family: var(--fonte-texto);
     font-size: 1.2rem;
     margin: 0.5rem;
-<<<<<<< HEAD
 }
 
-=======
-}
 .btn-voltar {
     position: fixed;
     bottom: 30px;
@@ -57,7 +54,6 @@ header p {
     transform: translateY(-3px);
 }
 
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
 /* Main */
 main {
     flex: 1;

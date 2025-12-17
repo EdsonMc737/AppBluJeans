@@ -10,54 +10,13 @@
     <title>{{ titulo }}</title>
 </head>
 <body>
-<<<<<<< HEAD
+<header>
 
-    <header>
-<!-- NAV MENU -->
-<nav class="navbar">
-    <div class="logo"><a href="{{ url_for('home.index') }}">The Night</a></div>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="{{ url_for('home.index') }}">Início</a></li>
-        <li><a href="{{ url_for('home.page_modelo') }}">Modelos</a></li>
-        <li><a href="{{ url_for('home.imagens') }}">Galeria</a></li>
-        <li><a href="{{url_for('home.contatos')}}">Contato</a></li>
-    </ul>
-
-    <form class="search-form" action="{{ url_for('home.index') }}" method="GET">
-        <input type="text" name="pesquisa" placeholder="Digite Nome" value="{{ pesquisa }}">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-    <div class="menu-btn" id="menuBtn">&#9776;</div>
-</nav>
-
-
-        <!-- BANNER PRINCIPAL -->
-
-        <div class="banner-principal">
-            <img src="{{ url_for('static', filename='img/banner/callGirls_21.jpg') }}" alt="Banner Principal">
-            <div class="overlay"></div> <!-- camada de transparência -->
-            <div class="banner-texto">
-                <h1>Descubra nossas modelos incríveis</h1>
-                <p>Explore nosso portfólio completo e encontre o estilo perfeito</p>
-                <a href="{{ url_for('home.page_modelo') }}" class="btn-banner">Ver Modelos</a>
-                <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-            </div>
-        </div>
-
-        <a href="https://web.whatsapp.com/" target="_blank" class="icone-flutuante">
-             <img src="{{url_for('static', filename='img/icones/whatsapp.png')}}" alt="Ícone">
-        </a>
-        <!-- FIM DO NAV -->
-
-=======
-  <header id="topo">
+<header id="topo">
     <!-- conteúdo do topo -->
 <!-- NAV MENU -->
  {% include "component/navmenu.html" %}
 <!-- FIM DO NAV -->
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
     </header>
     <main>
         {% block template %}
@@ -66,33 +25,12 @@
     <!-- Botão no final da página ou onde quiser -->
     <a href="#topo" class="btn-voltar">⬆ Voltar ao Início</a>
 
-<<<<<<< HEAD
-        <p class="footer-title">Siga-nos nas redes sociais</p>
 
-        <div class="social-icons">
-            <a href="https://web.telegram.org/"  target="_blank" class="telegram"><i class="fa-brands fa-telegram"></i></a>
-            <a href="https://www.instagram.com/"  target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/"  target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://web.whatsapp.com/"  target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/"  target="_blank" class="facebook"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-
-        <p class="copy">© 2025 — Todos os direitos reservados.</p>
-    </div>
-</footer>
-=======
     {% include "component/rodape.html" %}
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
 
 
-    <script>
-        const menuBtn = document.getElementById("menuBtn");
-        const navLinks = document.getElementById("navLinks");
 
-        menuBtn.onclick = () => {
-            navLinks.classList.toggle("open");
-        };
-    </script>
+<script src="{{url_for('static', filename='js/menu.js')}}"></script>
 
 </body>
 </html>

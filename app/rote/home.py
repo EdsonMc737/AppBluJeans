@@ -51,11 +51,20 @@ def imagens():
 @home_bp.route('/contato')
 def contatos():
     return render_template('pages/contato.html', titulo="Contato")
-<<<<<<< HEAD
-=======
+
 
 # Página de serviços
 @home_bp.route('/servico')
 def servicos():
     return render_template('pages/servicos.html', titulo="Serviços")
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
+
+# Página de serviços
+@home_bp.route('/msg/<int:id>')
+def msg(id):
+    # Procura o modelo pelo ID
+    modelo = next((m for m in MODELOS_DATA if m["id"] == id), None)
+    if not modelo:
+        return "Modelo não encontrado", 404
+
+    # Renderiza a página de mensagens com o modelo
+    return render_template('pages/msg.html', titulo="Mensagem", modelo=modelo)

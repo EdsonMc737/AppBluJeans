@@ -1,14 +1,25 @@
 
 {% set capa_url = url_for('static', filename='img/capas/' ~ modelo.capa) %}
+
 <div class="perfil-header" style="background-image: url('{{ capa_url }}');">
     <img class="perfil-avatar" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+
     <div class="perfil-info">
         <h1>{{ modelo.nome }}</h1>
         <p>{{ modelo.descricao }}</p>
+
         <div class="perfil-actions">
-            <button>Seguir</button>
-            <button>Mensagem</button>
-            <button>Curtir</button>
+            <!-- Botão Seguir -->
+            <button type="button" class="btn-seguir">Seguir</button>
+
+            <!-- Botão Mensagem (vai para rota msg) -->
+         <form action="{{ url_for('home.msg', id=modelo.id) }}" method="get" style="display: inline;">
+            <button type="submit" class="btn-enviar">Mensagem</button>
+        </form>
+
+
+            <!-- Botão Curtir -->
+            <button type="button" class="btn-curtir">Curtir</button>
         </div>
     </div>
 </div>

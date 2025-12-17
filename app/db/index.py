@@ -113,7 +113,7 @@ def perfil_modelos():
         {
             "id": 2 ,
             "nome": "Vicki Wade",
-            "descricao": "Ruiva, russa, branca",
+            "descricao": "Ruiva, russa",
 
             "imagem": "../../../static/img/destaques/VickiWade_1.jpg",
             "capa": "../../../static/img/capas/VickiWade_1.jpg",
@@ -194,7 +194,7 @@ def perfil_modelos():
         {
             "id": 3 ,
             "nome": "Wanda",
-            "descricao": "Descrição do modelo 3",
+            "descricao": "Loira, magra",
 
             "imagem": "../../../static/img/destaques/Wanda_2.jpg",
             "capa": "../../../static/img/capas/Wanda_1.jpg",
@@ -311,7 +311,7 @@ def perfil_modelos():
         {
             "id": 4 ,
             "nome": "Alissa Foxy",
-            "descricao": "Morena, Ucraniana",
+            "descricao": "Morena",
 
             "imagem": "../../../static/img/destaques/AlissaFoxy_1.jpg",
             "capa": "../../../static/img/capas/AlissaFoxy_1.jpg",
@@ -384,8 +384,8 @@ def perfil_modelos():
         },
         {
             "id": 5,
-            "nome": "Aria Alexander",
-            "descricao": "Americana, Morena",
+            "nome": "Aria A.",
+            "descricao": "Morena",
 
             "imagem": "../../../static/img/destaques/AriaAlexander_1.jpg",
             "capa": "../../../static/img/capas/AriaAlexander_1.jpg",
@@ -2487,7 +2487,7 @@ def perfil_modelos():
         {
             "id": 29 ,
             "nome": "Kali Rose",
-            "descricao": "Americana, tatuagem",
+            "descricao": "Tatuagem",
             "imagem": "../../../static/img/destaques/KaliRose_1.jpg",
             "capa": "../../../static/img/capas/KaliRose_1.jpg",
             "thumb":   "../../../static/img/modelos/KaliRose/KaliRose_1/KaliRose_2.jpg",
@@ -2546,7 +2546,7 @@ def perfil_modelos():
         {
             "id": 30 ,
             "nome": "Lena Paul",
-            "descricao": "Americana, Loira",
+            "descricao": "Loira",
             "imagem": "../../../static/img/destaques/LenaPaul_1.jpg",
             "capa": "../../../static/img/capas/LenaPaul_1.jpg",
             "thumb":   "../../../static/img/modelos/LenaPaul/LenaPaul_1/LenaPaul_2.jpg",
@@ -2617,11 +2617,7 @@ def perfil_modelos():
         {
             "id": 31,
             "nome": "Gina Valentina",
-<<<<<<< HEAD
-            "descricao": "Americana, Morena, Branca",
-=======
-            "descricao": "Americana, Morena",
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
+            "descricao": "Morena",
             "imagem": "../../../static/img/destaques/GinaValentina_1.jpg",
             "capa": "../../../static/img/capas/GinaValentina_1.jpg",
             "thumb":   "../../../static/img/modelos/GinaValentina/GinaValentina_2/GinaValentina_2.jpg",

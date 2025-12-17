@@ -5,7 +5,7 @@
     padding: 12px 24px;
     background-color: var(--azul-marinho);
     color: var(--branco);
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-secundaria);
     position: relative;
     z-index: 50; /* garante que fique acima de outros elementos */
 }
