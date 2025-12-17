@@ -125,8 +125,7 @@ body {
 .modal-prev  { top: 50%; left: 40px; transform: translateY(-50%); }
 .modal-next  { top: 50%; right: 40px; transform: translateY(-50%); }
 
-<<<<<<< HEAD
-=======
+
 /* Miniaturas dentro do modal */
 #thumbnailsContainer {
     display: flex;
@@ -152,46 +151,8 @@ body {
     border-color: #ff3ea5;
 }
 
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
-/* ===== Responsivo ===== */
 
-/* Tablets (até 992px) */
 @media (max-width: 992px) {
-<<<<<<< HEAD
-    .gallery {
-        gap: 20px;
-        padding: 15px;
-    }
-
-    .card {
-        width: 220px;
-        height: 320px;
-    }
-
-    .info h2 {
-        font-size: 1.1rem;
-    }
-
-    .info p {
-        font-size: 0.8rem;
-    }
-
-    .ver {
-        font-size: 0.85rem;
-    }
-
-    .modal-content {
-        max-width: 80%;
-        max-height: 80%;
-    }
-
-    .modal-close, .modal-prev, .modal-next {
-        font-size: 2.2rem;
-    }
-
-    .modal-prev { left: 20px; }
-    .modal-next { right: 20px; }
-=======
     .gallery { gap: 20px; padding: 15px; }
 
     .card { width: 220px; height: 320px; }
@@ -205,12 +166,10 @@ body {
     .modal-next { right: 20px; }
 
     #thumbnailsContainer img { width: 60px; height: 45px; }
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
 }
 
-/* Celulares (até 768px) */
 @media (max-width: 768px) {
-<<<<<<< HEAD
+
     .gallery {
         gap: 15px;
         padding: 10px;
@@ -245,7 +204,7 @@ body {
 
     .modal-prev { left: 15px; }
     .modal-next { right: 15px; }
-=======
+
     .gallery { gap: 15px; padding: 10px; }
 
     .card { width: 180px; height: 260px; }
@@ -259,12 +218,10 @@ body {
     .modal-next { right: 15px; }
 
     #thumbnailsContainer img { width: 50px; height: 40px; }
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
 }
 
-/* Pequenos celulares (até 480px) */
 @media (max-width: 480px) {
-<<<<<<< HEAD
+
     .gallery {
         gap: 10px;
         padding: 5px;
@@ -299,7 +256,7 @@ body {
 
     .modal-prev { left: 10px; }
     .modal-next { right: 10px; }
-=======
+
     .gallery { gap: 10px; padding: 5px; }
 
     .card { width: 140px; height: 200px; }
@@ -313,5 +270,5 @@ body {
     .modal-next { right: 10px; }
 
     #thumbnailsContainer img { width: 40px; height: 30px; }
->>>>>>> ace7ced (Implementado js e outras funcionalidades)
+
 }
