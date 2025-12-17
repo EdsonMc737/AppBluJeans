@@ -1,0 +1,96 @@
+/* Banner principal */
+.banner-principal {
+    position: relative;
+    width: 100%;
+    height: 500px; /* altura padrão desktop */
+    overflow: hidden;
+}
+
+.banner-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+.banner-principal .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+/* Texto centralizado */
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.banner-texto h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn-banner {
+    padding: 15px 35px;
+    background-color: #ff4081;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: #e73370;
+}
+
+/* ----------------- Media Queries ----------------- */
+
+/* Tablets (largura até 992px) */
+@media (max-width: 992px) {
+    .banner-principal {
+        height: 400px;
+    }
+    .banner-texto h1 {
+        font-size: 2.5em;
+    }
+    .banner-texto p {
+        font-size: 1.2em;
+    }
+    .btn-banner {
+        font-size: 1em;
+        padding: 12px 28px;
+    }
+}
+
+/* Celulares (largura até 576px) */
+@media (max-width: 576px) {
+    .banner-principal {
+        height: 300px;
+    }
+    .banner-texto h1 {
+        font-size: 1.8em;
+    }
+    .banner-texto p {
+        font-size: 1em;
+    }
+    .btn-banner {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}

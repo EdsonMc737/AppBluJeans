@@ -1,0 +1,36 @@
+{% extends 'template/base.html' %}
+{% block template %}
+
+<section class="chat-page-lateral">
+
+  <!-- PERFIL LATERAL -->
+  {% set capa_url = url_for('static', filename='img/capas/' ~ modelo.capa) %}
+  <div class="perfil-lateral">
+      <div class="perfil-capa" style="background-image: url('{{ capa_url }}');"></div>
+      <img class="perfil-avatar-lateral" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+      <h2>{{ modelo.nome }}</h2>
+      <p>{{ modelo.descricao }}</p>
+      <div class="perfil-actions-lateral">
+          <button type="button" class="btn-seguir">Seguir</button>
+          <button type="button" class="btn-curtir">Curtir</button>
+      </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat-container-lateral">
+      <div class="chat-messages" id="chatMessages">
+          <!-- Mensagens vão aparecer aqui -->
+      </div>
+
+      <form id="chatForm" class="chat-input-area-lateral">
+          <input type="text" id="chatInput" placeholder="Digite sua mensagem..." autocomplete="off" required>
+          <button type="submit">Enviar</button>
+      </form>
+  </div>
+
+</section>
+
+
+<script src="{{url_for('static', filename='js/msg.js')}}"></script>
+{% endblock %}
+

@@ -1,0 +1,102 @@
+/* ===== FOOTER ===== */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+main {
+    margin-bottom: 120px; /* espaço para não sobrepor o footer */
+}
+
+footer .icon {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    top: -5px;
+}
+
+.footer {
+    width: 100%;
+    background: #111;
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #b30000;
+    font-family: 'Fraktur', serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Efeitos individuais */
+.social-icons a.telegram:hover { color: #34b7f1; }
+.social-icons a.instagram:hover { color: #e1306c; }
+.social-icons a.twitter:hover { color: #1da1f2; }
+.social-icons a.whatsapp:hover { color: #25d366; }
+.social-icons a.facebook:hover { color: #4267B2; }
+
+.copy {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 992px) {
+    footer {
+        padding: 25px 20px;
+    }
+    .footer-title {
+        font-size: 1.2rem;
+    }
+    .social-icons a {
+        font-size: 1.8rem;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 15px;
+    }
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    .social-icons {
+        gap: 15px;
+    }
+    .social-icons a {
+        font-size: 1.6rem;
+    }
+    .copy {
+        font-size: 0.85rem;
+    }
+}

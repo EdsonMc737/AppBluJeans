@@ -1,0 +1,33 @@
+{% extends 'template/base.html' %}
+{% block template %}
+{% include "component/perfilface.html" %}
+<!-- Ensaios Fotográficos -->
+<div class="ensaios">
+    {% if modelo.ensaios %}
+        {% for ensaio in modelo.ensaios %}
+            <div class="ensaio" data-ensaio="{{ loop.index0 }}">
+                <h2>{{ ensaio.titulo }}</h2>
+                <p>{{ ensaio.descricao }}</p>
+                <div class="fotos-ensaio">
+                    {% for foto in ensaio.fotos %}
+                        <img src="{{ url_for('static', filename=foto) }}" alt="{{ ensaio.titulo }}">
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<!-- Modal para ampliar fotos -->
+<div id="modalFoto" class="modal">
+    <span class="modal-close">&times;</span>
+    <span class="modal-prev">&#10094;</span>
+    <span class="modal-next">&#10095;</span>
+    <div class="modal-main">
+        <img class="modal-content" id="imgModal">
+    </div>
+    <div class="modal-thumbnails" id="thumbnailsContainer"></div>
+</div>
+
+
+<script src="{{url_for('static', filename='js/perfil.js')}}"></script>
+{% endblock %}

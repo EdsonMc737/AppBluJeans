@@ -1,0 +1,170 @@
+.ver {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+}
+.ver:hover {
+    text-decoration: underline;
+}
+
+/* ================= CONTAINER DOS ENSAIOS ================= */
+.ensaios {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;              
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* ================= TÍTULO DO ENSAIO ================= */
+.ensaio h2 {
+    font-size: 2rem;
+    color: #ff0040;
+    font-family: 'Fraktur', serif;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.ensaio h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #ff0040;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+/* ================= DESCRIÇÃO ================= */
+.ensaio p {
+    font-size: 1rem;
+    color: #ff8caa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* ================= GRID DE FOTOS ================= */
+.fotos-ensaio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ================= FOTOS ================= */
+.fotos-ensaio img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fotos-ensaio img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 0, 64, 0.4);
+}
+
+/* ================= CARD VISUAL ================= */
+.ensaio {
+    background-color: #1b0000;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255,0,64,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ensaio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(255,0,64,0.35);
+}
+
+/* ================= MODAL ================= */
+.modal {
+    display: none;             
+    position: fixed;           
+    z-index: 10000;            
+    top: 0;
+    left: 0;
+    width: 100vw;              
+    height: 100vh;             
+    background: rgba(0,0,0,0.9);
+    justify-content: center;   
+    align-items: center;       
+    overflow: auto;            
+}
+
+.modal-content {
+    max-width: 90%;            
+    max-height: 90vh;          
+    width: auto;               
+    height: auto;              
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Botões de navegação */
+.modal-close, .modal-prev, .modal-next {
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+    z-index: 1010;
+}
+
+.modal-close { top: 20px; right: 30px; }
+.modal-prev  { left: 30px; top: 50%; transform: translateY(-50%); }
+.modal-next  { right: 30px; top: 50%; transform: translateY(-50%); }
+
+.modal-close:hover, .modal-prev:hover, .modal-next:hover {
+    color: #ff0040;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 992px) {
+    .fotos-ensaio {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .fotos-ensaio img {
+        height: 180px;
+    }
+
+    .ensaio h2 {
+        font-size: 1.7rem;
+    }
+
+    .ensaio p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fotos-ensaio {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .fotos-ensaio img {
+        height: 140px;
+    }
+
+    .ensaio h2 {
+        font-size: 1.5rem;
+    }
+
+    .ensaio p {
+        font-size: 0.9rem;
+    }
+}
+
+
+

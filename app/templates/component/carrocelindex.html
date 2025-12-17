@@ -1,0 +1,31 @@
+<section class="destaques-section">
+  <h1 class="titulo-destaques">Destaques</h1>
+
+  <section class="carrossel">
+    <!-- Botão seta esquerda -->
+    <button class="seta-esquerda">&#10094;</button>
+
+    <div class="carrossel-container">
+      {% for modelo in modelos %}
+      <a href="{{ url_for('home.perfil_modelo', id=modelo.id) }}" class="card-link">
+        <div class="modelo-card-carrossel">
+          <div class="card-img-container">
+            <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+            <div class="card-footer">
+              <div class="card-text">
+                <h2>{{ modelo.nome }}</h2>
+                <p>{{ modelo.descricao }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- Botão seta direita -->
+    <button class="seta-direita">&#10095;</button>
+  </section>
+</section>
+
+<script src="{{ url_for('static', filename='js/coverflow.js') }}"></script>

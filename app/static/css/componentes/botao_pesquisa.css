@@ -1,0 +1,92 @@
+/* ===== Formulário de Pesquisa Estilizado ===== */
+nav form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+nav form input[type="text"] {
+    padding: 8px 14px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    font-family: var(--fonte-texto);
+    transition: all 0.3s ease;
+    width: 180px;
+    background-color: var(--branco);
+    color: var(--azul-marinho);
+}
+
+nav form input[type="text"]::placeholder {
+    color: var(--cinza-medio);
+}
+
+nav form input[type="text"]:focus {
+    border-color: var(--vermelho-claro);
+    box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+}
+
+nav form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--vermelho-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    font-family: var(--fonte-secundaria);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav form button:hover {
+    background-color: var(--vermelho-claro);
+    color: var(--branco);
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablets (até 992px) */
+@media (max-width: 992px) {
+    nav form {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        gap: 6px;
+    }
+
+    nav form input[type="text"] {
+        width: 50%;
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    nav form button {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Celulares (até 576px) */
+@media (max-width: 576px) {
+    nav form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        margin-top: 8px;
+        width: 100%;
+    }
+
+    nav form input[type="text"] {
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    nav form button {
+        width: 100%;
+        padding: 6px;
+        font-size: 12px;
+    }
+}

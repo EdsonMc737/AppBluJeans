@@ -1,0 +1,30 @@
+{% extends 'template/base.html' %}
+
+{% block template %}
+<!-- BANNER -->
+{% include "component/banner.html" %}
+
+<section class="modelos-section">
+    <h1 class="titulo-destaques">Nossas Modelos</h1>
+
+    <div class="modelos-grid">
+        {% for modelo in modelos %}
+        <div class="modelo-card">
+            <div class="card-img-container">
+                <a href="{{ url_for('home.perfil_modelo', id=modelo.id) }}">
+                    <img src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
+                </a>
+                <!-- Faixa preta inferior -->
+                <div class="card-footer">
+                    <div class="card-text">
+                        <h2>{{ modelo.nome }}</h2>
+                        <p>{{ modelo.descricao }}</p>
+                    </div>
+                    <a href="{{ url_for('home.perfil_modelo', id=modelo.id) }}" class="btn-perfil">Ver Perfil</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

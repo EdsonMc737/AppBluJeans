@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>{{ titulo }}</title>
+</head>
+<body>
+<header>
+
+<header id="topo">
+    <!-- conteúdo do topo -->
+<!-- NAV MENU -->
+ {% include "component/navmenu.html" %}
+<!-- FIM DO NAV -->
+    </header>
+    <main>
+        {% block template %}
+        {% endblock %}
+    </main>
+    <!-- Botão no final da página ou onde quiser -->
+    <a href="#topo" class="btn-voltar">⬆ Voltar ao Início</a>
+
+
+    {% include "component/rodape.html" %}
+
+
+
+<script src="{{url_for('static', filename='js/menu.js')}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'template/base.html' %}
+{% block template %}
+{% include "component/banner.html" %}
+<section class="servicos-full">
+    <h1 class="servicos-titulo">Serviços de Massoterapia</h1>
+
+    <!-- FOR HANDS -->
+    <div class="servico-card">
+        <img src="../../static/img/massagens/relax_4.jpg" alt="Massagem For Hands">
+        <div class="servico-overlay">
+            <h2>Massagem For Hands</h2>
+            <p>Dois terapeutas trabalhando simultaneamente para proporcionar um relaxamento profundo e equilibrado.</p>
+            <a href="https://web.whatsapp.com/" target="_blank" class="btn-servico">Agendar sessão</a>
+        </div>
+    </div>
+
+    <!-- TAILANDESA -->
+    <div class="servico-card">
+        <img src="../../static/img/massagens/relax_3.jpg" alt="Massagem Tailandesa">
+        <div class="servico-overlay">
+            <h2>Massagem Tailandesa</h2>
+            <p>Alongamentos e pressões tradicionais que devolvem flexibilidade e aliviam dores.</p>
+            <a href="https://web.whatsapp.com/"   target="_blank" class="btn-servico">Agendar sessão</a>
+        </div>
+    </div>
+
+    <!-- TÂNTRICA -->
+    <div class="servico-card">
+        <img src="../../static/img/massagens/relax-oleo_1.jpg" alt="Massagem Tântrica">
+        <div class="servico-overlay">
+            <h2>Massagem Tântrica</h2>
+            <p>Terapia com respiração e estímulos corporais para desbloqueio energético e autoconexão.</p>
+            <a href="https://web.whatsapp.com/" target="_blank" class="btn-servico">Agendar sessão</a>
+        </div>
+    </div>
+
+    <!-- PÉS -->
+    <div class="servico-card">
+        <img src="../../static/img/massagens/pes_3.jpg" alt="Massagem nos Pés">
+        <div class="servico-overlay">
+            <h2>Reflexologia Podal</h2>
+            <p>Estimulação de pontos reflexos que aliviam tensões e melhoram a circulação.</p>
+            <a href="https://web.whatsapp.com/" target="_blank" class="btn-servico">Agendar sessão</a>
+        </div>
+    </div>
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'template/base.html' %}
+{% block template %}
+ <!--BANNER-->
+ {% include "component/banner.html" %}
+<h1 class="titulo">Galeria de Modelos</h1>
+
+<!-- Container único para enviar dados ao JS externo -->
+<div id="app" data-modelos='{{ modelos | tojson | default("[]") | safe }}'></div>
+
+<div class="gallery">
+    {% for modelo in modelos %}
+    <div class="card">
+        <img src="{{ url_for('static', filename=modelo.thumb) }}" alt="{{ modelo.nome }}">
+        <div class="info">
+            <h2>{{ modelo.nome }}</h2>
+            <p>{{ modelo.descricao }}</p>
+            <button class="ver" onclick="abrirSelecaoEnsaio({{ modelo.id }})">
+                Ver Ensaios →
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Modal principal -->
+<div id="modalEnsaio" class="modal">
+    <span class="modal-close">&times;</span>
+    <span class="modal-prev">&#10094;</span>
+    <span class="modal-next">&#10095;</span>
+
+    <div class="modal-main">
+        <img class="modal-content" id="imgModal">
+    </div>
+
+    <div class="modal-thumbnails" id="thumbnailsContainer"></div>
+
+</div>
+
+<!-- Modal de seleção de ensaios -->
+<div id="modalSelecao" class="modal">
+    <span class="modal-close" onclick="fecharSelecao()">&times;</span>
+    <div class="modal-main" id="listaEnsaios"></div>
+</div>
+
+
+<script src="{{ url_for('static', filename='js/photo-gallery.js') }}"></script>
+
+{% endblock %}

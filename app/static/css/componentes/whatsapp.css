@@ -1,0 +1,17 @@
+.icone-flutuante {
+    position: fixed;      /* Fica fixo mesmo rolando a página */
+    bottom: 20px;         /* Distância do fundo */
+    right: 20px;          /* Distância da direita */
+    z-index: 999;         /* Fica por cima dos outros elementos */
+}
+
+.icone-flutuante img {
+    width: 70px;          /* Tamanho do ícone */
+    height: 70px;
+    cursor: pointer;      /* Mostra o ícone como clicável */
+    transition: transform 0.2s;
+}
+
+.icone-flutuante img:hover {
+    transform: scale(1.1); /* Efeito ao passar o mouse */
+}
