@@ -1,4 +1,4 @@
-/* LAYOUT LATERAL BASE */
+/* ===== LAYOUT LATERAL ===== */
 .chat-page-lateral {
     display: flex;
     height: 80vh;
@@ -41,7 +41,7 @@
 .perfil-lateral h2 {
     margin: 10px 0 5px;
     font-size: 18px;
-    font-family: var( --fonte-secundaria);
+    font-family: var(--fonte-secundaria);
 }
 
 .perfil-lateral p {
@@ -148,7 +148,7 @@
     background: linear-gradient(45deg, #218838, #28a745);
 }
 
-/* ===== RESPONSIVO ===== */
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .chat-page-lateral {
         flex-direction: column;
@@ -164,7 +164,7 @@
     }
 
     .perfil-capa {
-        display: none; /* escondemos capa para telas pequenas */
+        display: none;
     }
 
     .perfil-avatar-lateral {
@@ -177,15 +177,13 @@
     .perfil-lateral h2 {
         font-size: 16px;
         margin: 0;
-        color: #222; /* cor escura para melhor contraste */
-        text-align: center;
     }
 
     .perfil-lateral p {
-    font-size: 13px;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #555; 
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #555; 
     }
 
     .perfil-actions-lateral {

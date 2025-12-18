@@ -9,7 +9,6 @@
       <div class="perfil-capa" style="background-image: url('{{ capa_url }}');"></div>
       <img class="perfil-avatar-lateral" src="{{ url_for('static', filename='img/destaques/' ~ modelo.imagem) }}" alt="{{ modelo.nome }}">
       <h2>{{ modelo.nome }}</h2>
-      <p>{{ modelo.descricao }}</p>
       <div class="perfil-actions-lateral">
           <button type="button" class="btn-seguir">Seguir</button>
           <button type="button" class="btn-curtir">Curtir</button>
@@ -22,7 +21,8 @@
           <!-- Mensagens vão aparecer aqui -->
       </div>
 
-      <form id="chatForm" class="chat-input-area-lateral">
+      <!-- Adicionado data-modelo-id para JS -->
+      <form id="chatForm" class="chat-input-area-lateral" data-modelo-id="{{ modelo.id }}">
           <input type="text" id="chatInput" placeholder="Digite sua mensagem..." autocomplete="off" required>
           <button type="submit">Enviar</button>
       </form>
@@ -30,7 +30,7 @@
 
 </section>
 
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
 
-<script src="{{url_for('static', filename='js/msg.js')}}"></script>
 {% endblock %}
-
